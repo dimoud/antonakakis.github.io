@@ -4,10 +4,10 @@
   --gold: #3a7bd5;
   --gold-light: #6fa3e8;
   --gold-dark: #1e4f9a;
-  --dark: #0a0d12;
-  --dark-2: #111520;
-  --dark-3: #182030;
-  --dark-4: #1e2a3e;
+  --dark: #2c2c2c;
+  --dark-2: #383838;
+  --dark-3: #444444;
+  --dark-4: #505050;
   --white: #ffffff;
   --off-white: #e8ecf4;
   --gray: #8a96a8;
@@ -41,7 +41,7 @@ nav {
   transition: background 0.4s, backdrop-filter 0.4s;
 }
 nav.scrolled {
-  background: rgba(10,13,18,0.92);
+  background: rgba(44,44,44,0.95);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(58,123,213,0.15);
 }
@@ -150,9 +150,9 @@ nav.scrolled {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(13,13,13,0.85) 0%,
-    rgba(13,13,13,0.5) 50%,
-    rgba(13,13,13,0.7) 100%
+    rgba(44,44,44,0.80) 0%,
+    rgba(44,44,44,0.45) 50%,
+    rgba(44,44,44,0.65) 100%
   );
 }
 .hero-content {
@@ -641,7 +641,7 @@ section { padding: 120px 0; }
 .gallery-item-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,13,13,0.8) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(44,44,44,0.8) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.4s;
   display: flex;
