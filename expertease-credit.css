@@ -20,8 +20,8 @@
 hr.ec-rule {
   border: none;
   height: 1px;
-  margin: 0 6%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  margin: 0;
+  background: #1a2340;
 }
 
 /* ── outer wrapper ── */
@@ -30,7 +30,7 @@ hr.ec-rule {
   z-index: 0;
   isolation: isolate;
   contain: layout style;
-  background: transparent;
+  background: #1a2340;
   overflow: hidden;
   font-family: var(--ec-font);
   padding: 0 6%;

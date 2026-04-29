@@ -16,17 +16,27 @@
 <!-- ══ NAV ══ -->
 <nav id="main-nav">
   <a href="#" class="nav-logo">
-    <div class="nav-logo-mark">Α</div>
-    <span class="nav-logo-text">Αντωνακάκης</span>
+    <img src="logo.png" alt="Αντωνακάκης Κατασκευαστική" class="nav-logo-img" />
   </a>
   <ul class="nav-links">
-    <li><a href="#about">Σχετικά</a></li>
-    <li><a href="#services">Υπηρεσίες</a></li>
-    <li><a href="#process">Διαδικασία</a></li>
-    <li><a href="#projects">Έργα</a></li>
-    <li><a href="#contact">Επικοινωνία</a></li>
+    <li><a href="#about"    data-el="Σχετικά"      data-en="About">Σχετικά</a></li>
+    <li><a href="#services" data-el="Υπηρεσίες"    data-en="Services">Υπηρεσίες</a></li>
+    <li><a href="#process"  data-el="Διαδικασία"   data-en="Process">Διαδικασία</a></li>
+    <li><a href="#projects" data-el="Έργα"         data-en="Projects">Έργα</a></li>
+    <li><a href="#contact"  data-el="Επικοινωνία"  data-en="Contact">Επικοινωνία</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Επικοινωνήστε</a>
+  <div class="nav-right">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+      <span class="lang-opt" id="lang-el">
+        <img src="https://flagcdn.com/w20/gr.png" srcset="https://flagcdn.com/w40/gr.png 2x" width="20" alt="GR"> GR
+      </span>
+      <span class="lang-sep">|</span>
+      <span class="lang-opt" id="lang-en">
+        <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="EN"> EN
+      </span>
+    </button>
+    <a href="#contact" class="nav-cta" data-el="Επικοινωνήστε" data-en="Contact Us">Επικοινωνήστε</a>
+  </div>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -37,42 +47,38 @@
 <div class="mobile-drawer" id="mobile-drawer">
   <button class="drawer-close" id="drawer-close">✕</button>
   <ul class="nav-links">
-    <li><a href="#about">Σχετικά</a></li>
-    <li><a href="#services">Υπηρεσίες</a></li>
-    <li><a href="#process">Διαδικασία</a></li>
-    <li><a href="#projects">Έργα</a></li>
-    <li><a href="#contact">Επικοινωνία</a></li>
+    <li><a href="#about"    data-el="Σχετικά"      data-en="About">Σχετικά</a></li>
+    <li><a href="#services" data-el="Υπηρεσίες"    data-en="Services">Υπηρεσίες</a></li>
+    <li><a href="#process"  data-el="Διαδικασία"   data-en="Process">Διαδικασία</a></li>
+    <li><a href="#projects" data-el="Έργα"         data-en="Projects">Έργα</a></li>
+    <li><a href="#contact"  data-el="Επικοινωνία"  data-en="Contact">Επικοινωνία</a></li>
   </ul>
-  <a href="#contact" class="nav-cta" style="text-align:center">Επικοινωνήστε</a>
+  <a href="#contact" class="nav-cta" style="text-align:center" data-el="Επικοινωνήστε" data-en="Contact Us">Επικοινωνήστε</a>
 </div>
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
   <div class="hero-slides" id="hero-slides">
-    <div class="hero-slide active" style="background-image:url('https://antonakakis-kataskevastiki.gr/projects/project-01.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('https://antonakakis-kataskevastiki.gr/projects/project-05.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('https://antonakakis-kataskevastiki.gr/projects/project-10.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('https://antonakakis-kataskevastiki.gr/projects/project-15.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('https://antonakakis-kataskevastiki.gr/projects/project-20.jpg')"></div>
+    <div class="hero-slide active" style="background-image:url('main_page.jpg')"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">
       <div class="hero-badge-line"></div>
-      <span>Αντωνακάκης Κατασκευαστική</span>
+      <span data-el="Αντωνακάκης Κατασκευαστική" data-en="Antonakakis Construction">Αντωνακάκης Κατασκευαστική</span>
       <div class="hero-badge-line"></div>
     </div>
     <h1 class="hero-title">
-      Ανακαινίζουμε<br><em>το Σπίτι σας</em>
+      <span data-el="Ανακαινίζουμε" data-en="We Renovate">Ανακαινίζουμε</span><br><em data-el="το Σπίτι σας" data-en="Your Home">το Σπίτι σας</em>
     </h1>
-    <p class="hero-subtitle">Με Τέχνη, Συνέπεια &amp; Εγγύηση</p>
-    <p class="hero-desc">
+    <p class="hero-subtitle" data-el="Με Τέχνη, Συνέπεια &amp; Εγγύηση" data-en="With Craft, Reliability &amp; Guarantee">Με Τέχνη, Συνέπεια &amp; Εγγύηση</p>
+    <p class="hero-desc" data-el="Ολοκληρωμένες ανακαινίσεις και κατασκευές σε Αττική και πανελλαδικά. Κάθε έργο παραδίδεται με γραπτή εγγύηση και αυστηρή τήρηση χρονοδιαγράμματος." data-en="Complete renovations and construction across Attica and nationwide. Every project is delivered with a written guarantee and strict adherence to schedule.">
       Ολοκληρωμένες ανακαινίσεις και κατασκευές σε Αττική και πανελλαδικά.
       Κάθε έργο παραδίδεται με γραπτή εγγύηση και αυστηρή τήρηση χρονοδιαγράμματος.
     </p>
     <div class="hero-actions">
-      <a href="#projects" class="btn-primary">Δείτε τα Έργα μας</a>
-      <a href="#contact" class="btn-secondary">Ζητήστε Προσφορά</a>
+      <a href="#projects" class="btn-primary" data-el="Δείτε τα Έργα μας" data-en="View Our Projects">Δείτε τα Έργα μας</a>
+      <a href="#contact" class="btn-secondary" data-el="Ζητήστε Προσφορά" data-en="Get a Quote">Ζητήστε Προσφορά</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -86,19 +92,19 @@
   <div class="stats-inner">
     <div class="stat-item reveal">
       <span class="stat-number" data-target="500">0</span>
-      <span class="stat-label">Ολοκληρωμένα Έργα</span>
+      <span class="stat-label" data-el="Ολοκληρωμένα Έργα" data-en="Completed Projects">Ολοκληρωμένα Έργα</span>
     </div>
     <div class="stat-item reveal reveal-delay-1">
       <span class="stat-number" data-target="15">0</span>
-      <span class="stat-label">Χρόνια Εμπειρίας</span>
+      <span class="stat-label" data-el="Χρόνια Εμπειρίας" data-en="Years of Experience">Χρόνια Εμπειρίας</span>
     </div>
     <div class="stat-item reveal reveal-delay-2">
       <span class="stat-number">100<small style="font-size:0.5em">%</small></span>
-      <span class="stat-label">Γραπτή Εγγύηση</span>
+      <span class="stat-label" data-el="Γραπτή Εγγύηση" data-en="Written Guarantee">Γραπτή Εγγύηση</span>
     </div>
     <div class="stat-item reveal reveal-delay-3">
       <span class="stat-number" data-target="24">0</span>
-      <span class="stat-label">Ώρες Υποστήριξης</span>
+      <span class="stat-label" data-el="Ώρες Υποστήριξης" data-en="Hour Support">Ώρες Υποστήριξης</span>
     </div>
   </div>
 </div>
@@ -112,46 +118,42 @@
         <img class="about-img-accent" src="https://antonakakis-kataskevastiki.gr/projects/project-08.jpg" alt="Κατασκευή" loading="lazy" />
         <div class="about-tag">
           <span class="about-tag-number">15+</span>
-          <span class="about-tag-text">Χρόνια<br>Εμπειρίας</span>
+          <span class="about-tag-text" data-el="Χρόνια Εμπειρίας" data-en="Years of Experience">Χρόνια<br>Εμπειρίας</span>
         </div>
       </div>
       <div>
         <div class="section-label reveal">
           <div class="section-label-line"></div>
-          <span>Σχετικά με εμάς / About Us</span>
+          <span data-el="Σχετικά με εμάς" data-en="About Us">Σχετικά με εμάς</span>
         </div>
-        <h2 class="section-title reveal">
+        <h2 class="section-title reveal" data-el="Ο Χώρος σας &lt;em&gt;Αξίζει το Καλύτερο&lt;/em&gt;" data-en="Your Space &lt;em&gt;Deserves the Best&lt;/em&gt;">
           Ο Χώρος σας<br><em>Αξίζει το Καλύτερο</em>
         </h2>
-        <p class="section-desc reveal">
+        <p class="section-desc reveal" data-el="Ο Αντωνακάκης Θεοφάνης και η ομάδα μας αναλαμβάνουν κάθε έργο ανακαίνισης ή κατασκευής με απόλυτο επαγγελματισμό. Από τη μελέτη έως την παράδοση, φροντίζουμε για κάθε λεπτομέρεια — ώστε το αποτέλεσμα να ξεπεράσει τις προσδοκίες σας." data-en="Antonakakis Theofanis and our team take on every renovation or construction project with absolute professionalism. From design to delivery, we attend to every detail — so the result exceeds your expectations.">
           Ο Αντωνακάκης Θεοφάνης και η ομάδα μας αναλαμβάνουν κάθε έργο ανακαίνισης
           ή κατασκευής με απόλυτο επαγγελματισμό. Από τη μελέτη έως την παράδοση,
           φροντίζουμε για κάθε λεπτομέρεια — ώστε το αποτέλεσμα να ξεπεράσει τις προσδοκίες σας.
-        </p>
-        <p class="section-desc reveal" style="margin-top:16px;font-size:14px;font-style:italic;">
-          Antonakakis Theofanis and our team take on every renovation or construction
-          project with absolute professionalism — from design to delivery.
         </p>
         <div class="about-promises">
           <div class="promise-item reveal">
             <div class="promise-icon">✦</div>
             <div class="promise-text">
-              <strong>Γραπτή Εγγύηση σε Όλα τα Έργα</strong>
-              <p>Κάθε εργασία καλύπτεται με γραπτή εγγύηση και εξασφαλίζει την ησυχία σας.</p>
+              <strong data-el="Γραπτή Εγγύηση σε Όλα τα Έργα" data-en="Written Guarantee on All Projects">Γραπτή Εγγύηση σε Όλα τα Έργα</strong>
+              <p data-el="Κάθε εργασία καλύπτεται με γραπτή εγγύηση και εξασφαλίζει την ησυχία σας." data-en="Every job is covered by a written guarantee, giving you complete peace of mind.">Κάθε εργασία καλύπτεται με γραπτή εγγύηση και εξασφαλίζει την ησυχία σας.</p>
             </div>
           </div>
           <div class="promise-item reveal reveal-delay-1">
             <div class="promise-icon">◈</div>
             <div class="promise-text">
-              <strong>Αυστηρή Τήρηση Χρονοδιαγράμματος</strong>
-              <p>Παραδίδουμε εντός συμφωνημένου χρόνου, χωρίς εκπλήξεις και καθυστερήσεις.</p>
+              <strong data-el="Αυστηρή Τήρηση Χρονοδιαγράμματος" data-en="Strict Schedule Adherence">Αυστηρή Τήρηση Χρονοδιαγράμματος</strong>
+              <p data-el="Παραδίδουμε εντός συμφωνημένου χρόνου, χωρίς εκπλήξεις και καθυστερήσεις." data-en="We deliver within the agreed timeframe, with no surprises or delays.">Παραδίδουμε εντός συμφωνημένου χρόνου, χωρίς εκπλήξεις και καθυστερήσεις.</p>
             </div>
           </div>
           <div class="promise-item reveal reveal-delay-2">
             <div class="promise-icon">◉</div>
             <div class="promise-text">
-              <strong>Επιλογή Ποιοτικών Υλικών</strong>
-              <p>Χρησιμοποιούμε αποκλειστικά υλικά υψηλής ποιότητας για διαρκή αποτελέσματα.</p>
+              <strong data-el="Επιλογή Ποιοτικών Υλικών" data-en="Premium Quality Materials">Επιλογή Ποιοτικών Υλικών</strong>
+              <p data-el="Χρησιμοποιούμε αποκλειστικά υλικά υψηλής ποιότητας για διαρκή αποτελέσματα." data-en="We use only high-quality materials for lasting, durable results.">Χρησιμοποιούμε αποκλειστικά υλικά υψηλής ποιότητας για διαρκή αποτελέσματα.</p>
             </div>
           </div>
         </div>
@@ -167,13 +169,13 @@
       <div>
         <div class="section-label reveal">
           <div class="section-label-line"></div>
-          <span>Υπηρεσίες / Services</span>
+          <span data-el="Υπηρεσίες" data-en="Services">Υπηρεσίες</span>
         </div>
-        <h2 class="section-title reveal">
+        <h2 class="section-title reveal" data-el="Ό,τι Χρειάζεται &lt;em&gt;το Σπίτι σας&lt;/em&gt;" data-en="Everything Your &lt;em&gt;Home Needs&lt;/em&gt;">
           Ό,τι Χρειάζεται<br><em>το Σπίτι σας</em>
         </h2>
       </div>
-      <p class="section-desc reveal">
+      <p class="section-desc reveal" data-el="Αναλαμβάνουμε πλήρες φάσμα εργασιών ανακαίνισης και κατασκευής. Μία εταιρεία, μία υπεύθυνη ομάδα, πλήρης κάλυψη αναγκών." data-en="We handle the full spectrum of renovation and construction work. One company, one responsible team, complete coverage of your needs.">
         Αναλαμβάνουμε πλήρες φάσμα εργασιών ανακαίνισης και κατασκευής.
         Μία εταιρεία, μία υπεύθυνη ομάδα, πλήρης κάλυψη αναγκών.
       </p>
@@ -182,67 +184,67 @@
       <div class="service-card reveal">
         <span class="service-number">01</span>
         <div class="service-icon">⌂</div>
-        <h3 class="service-name">Ανακαίνιση &amp; Αναπαλαίωση</h3>
-        <p class="service-desc">Ολοκληρωμένη ανακαίνιση κατοικιών, επαγγελματικών χώρων και κτιρίων.</p>
+        <h3 class="service-name" data-el="Ανακαίνιση &amp; Αναπαλαίωση" data-en="Renovation &amp; Restoration">Ανακαίνιση &amp; Αναπαλαίωση</h3>
+        <p class="service-desc" data-el="Ολοκληρωμένη ανακαίνιση κατοικιών, επαγγελματικών χώρων και κτιρίων." data-en="Complete renovation of residences, commercial spaces and buildings.">Ολοκληρωμένη ανακαίνιση κατοικιών, επαγγελματικών χώρων και κτιρίων.</p>
         <ul class="service-items">
-          <li>Μελέτη &amp; Σχεδιασμός</li>
-          <li>Κατασκευή &amp; Επίβλεψη</li>
-          <li>Διακόσμηση</li>
+          <li data-el="Μελέτη &amp; Σχεδιασμός" data-en="Study &amp; Design">Μελέτη &amp; Σχεδιασμός</li>
+          <li data-el="Κατασκευή &amp; Επίβλεψη" data-en="Construction &amp; Supervision">Κατασκευή &amp; Επίβλεψη</li>
+          <li data-el="Διακόσμηση" data-en="Interior Decoration">Διακόσμηση</li>
         </ul>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <span class="service-number">02</span>
         <div class="service-icon">⚡</div>
-        <h3 class="service-name">Ηλεκτρολογικά &amp; Υδραυλικά</h3>
-        <p class="service-desc">Πλήρεις ηλεκτρολογικές και υδραυλικές εγκαταστάσεις και αναβαθμίσεις.</p>
+        <h3 class="service-name" data-el="Ηλεκτρολογικά &amp; Υδραυλικά" data-en="Electrical &amp; Plumbing">Ηλεκτρολογικά &amp; Υδραυλικά</h3>
+        <p class="service-desc" data-el="Πλήρεις ηλεκτρολογικές και υδραυλικές εγκαταστάσεις και αναβαθμίσεις." data-en="Complete electrical and plumbing installations and upgrades.">Πλήρεις ηλεκτρολογικές και υδραυλικές εγκαταστάσεις και αναβαθμίσεις.</p>
         <ul class="service-items">
-          <li>Ηλεκτρολογικές Εγκαταστάσεις</li>
-          <li>Συναγερμοί</li>
-          <li>Υδραυλικά &amp; Θέρμανση</li>
+          <li data-el="Ηλεκτρολογικές Εγκαταστάσεις" data-en="Electrical Installations">Ηλεκτρολογικές Εγκαταστάσεις</li>
+          <li data-el="Συναγερμοί" data-en="Alarm Systems">Συναγερμοί</li>
+          <li data-el="Υδραυλικά &amp; Θέρμανση" data-en="Plumbing &amp; Heating">Υδραυλικά &amp; Θέρμανση</li>
         </ul>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <span class="service-number">03</span>
         <div class="service-icon">◧</div>
-        <h3 class="service-name">Δάπεδα &amp; Επενδύσεις</h3>
-        <p class="service-desc">Τοποθέτηση και γυάλισμα δαπέδων, επενδύσεις δαπέδων και τοίχων.</p>
+        <h3 class="service-name" data-el="Δάπεδα &amp; Επενδύσεις" data-en="Floors &amp; Cladding">Δάπεδα &amp; Επενδύσεις</h3>
+        <p class="service-desc" data-el="Τοποθέτηση και γυάλισμα δαπέδων, επενδύσεις δαπέδων και τοίχων." data-en="Floor laying and polishing, floor and wall cladding.">Τοποθέτηση και γυάλισμα δαπέδων, επενδύσεις δαπέδων και τοίχων.</p>
         <ul class="service-items">
-          <li>Βιομηχανικά Δάπεδα</li>
-          <li>Γυάλισμα Πατωμάτων</li>
-          <li>Τσιμεντοκονία</li>
+          <li data-el="Βιομηχανικά Δάπεδα" data-en="Industrial Floors">Βιομηχανικά Δάπεδα</li>
+          <li data-el="Γυάλισμα Πατωμάτων" data-en="Floor Polishing">Γυάλισμα Πατωμάτων</li>
+          <li data-el="Τσιμεντοκονία" data-en="Cement Screed">Τσιμεντοκονία</li>
         </ul>
       </div>
       <div class="service-card reveal">
         <span class="service-number">04</span>
         <div class="service-icon">🪟</div>
-        <h3 class="service-name">Αλουμίνια &amp; Πόρτες Ασφαλείας</h3>
-        <p class="service-desc">Κατασκευή και τοποθέτηση κουφωμάτων, σιδηροκατασκευών και πορτών ασφαλείας.</p>
+        <h3 class="service-name" data-el="Αλουμίνια &amp; Πόρτες Ασφαλείας" data-en="Aluminium &amp; Security Doors">Αλουμίνια &amp; Πόρτες Ασφαλείας</h3>
+        <p class="service-desc" data-el="Κατασκευή και τοποθέτηση κουφωμάτων, σιδηροκατασκευών και πορτών ασφαλείας." data-en="Manufacture and installation of frames, metalwork and security doors.">Κατασκευή και τοποθέτηση κουφωμάτων, σιδηροκατασκευών και πορτών ασφαλείας.</p>
         <ul class="service-items">
-          <li>Πόρτες Ασφαλείας</li>
-          <li>Αλουμίνια &amp; Σιδηροκατασκευές</li>
-          <li>Γκαραζόπορτες &amp; Ράμπες</li>
+          <li data-el="Πόρτες Ασφαλείας" data-en="Security Doors">Πόρτες Ασφαλείας</li>
+          <li data-el="Αλουμίνια &amp; Σιδηροκατασκευές" data-en="Aluminium &amp; Metalwork">Αλουμίνια &amp; Σιδηροκατασκευές</li>
+          <li data-el="Γκαραζόπορτες &amp; Ράμπες" data-en="Garage Doors &amp; Ramps">Γκαραζόπορτες &amp; Ράμπες</li>
         </ul>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <span class="service-number">05</span>
         <div class="service-icon">☀</div>
-        <h3 class="service-name">Ενεργειακή Αναβάθμιση</h3>
-        <p class="service-desc">Θερμομόνωση, υγρομόνωση, ηλιακοί θερμοσίφωνες και θερμοπρόσοψη κτιρίων.</p>
+        <h3 class="service-name" data-el="Ενεργειακή Αναβάθμιση" data-en="Energy Upgrades">Ενεργειακή Αναβάθμιση</h3>
+        <p class="service-desc" data-el="Θερμομόνωση, υγρομόνωση, ηλιακοί θερμοσίφωνες και θερμοπρόσοψη κτιρίων." data-en="Thermal insulation, waterproofing, solar heaters and building facade insulation.">Θερμομόνωση, υγρομόνωση, ηλιακοί θερμοσίφωνες και θερμοπρόσοψη κτιρίων.</p>
         <ul class="service-items">
-          <li>Θερμομόνωση &amp; Υγρομόνωση</li>
-          <li>Ηλιακοί Θερμοσίφωνες</li>
-          <li>Επισκευές Όψεων Κτιρίων</li>
+          <li data-el="Θερμομόνωση &amp; Υγρομόνωση" data-en="Thermal &amp; Waterproofing">Θερμομόνωση &amp; Υγρομόνωση</li>
+          <li data-el="Ηλιακοί Θερμοσίφωνες" data-en="Solar Water Heaters">Ηλιακοί Θερμοσίφωνες</li>
+          <li data-el="Επισκευές Όψεων Κτιρίων" data-en="Building Facade Repairs">Επισκευές Όψεων Κτιρίων</li>
         </ul>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <span class="service-number">06</span>
         <div class="service-icon">◻</div>
-        <h3 class="service-name">Γυψοσανίδες &amp; Ντουλάπες</h3>
-        <p class="service-desc">Ψευδοροφές, γυψοσανίδες, κουζίνες, ντουλάπες και πλήρης εξοπλισμός.</p>
+        <h3 class="service-name" data-el="Γυψοσανίδες &amp; Ντουλάπες" data-en="Drywalls &amp; Wardrobes">Γυψοσανίδες &amp; Ντουλάπες</h3>
+        <p class="service-desc" data-el="Ψευδοροφές, γυψοσανίδες, κουζίνες, ντουλάπες και πλήρης εξοπλισμός." data-en="False ceilings, drywalls, kitchens, wardrobes and full fit-out.">Ψευδοροφές, γυψοσανίδες, κουζίνες, ντουλάπες και πλήρης εξοπλισμός.</p>
         <ul class="service-items">
-          <li>Γυψοσανίδες &amp; Γυψίνα</li>
-          <li>Ντουλάπες &amp; Κουζίνες</li>
-          <li>Χτίσματα &amp; Σοβατίσματα</li>
+          <li data-el="Γυψοσανίδες &amp; Γυψίνα" data-en="Drywalls &amp; Plasterwork">Γυψοσανίδες &amp; Γυψίνα</li>
+          <li data-el="Ντουλάπες &amp; Κουζίνες" data-en="Wardrobes &amp; Kitchens">Ντουλάπες &amp; Κουζίνες</li>
+          <li data-el="Χτίσματα &amp; Σοβατίσματα" data-en="Masonry &amp; Plastering">Χτίσματα &amp; Σοβατίσματα</li>
         </ul>
       </div>
     </div>
@@ -255,11 +257,11 @@
     <div style="text-align:center; max-width:600px; margin:0 auto;">
       <div class="section-label reveal" style="justify-content:center;">
         <div class="section-label-line"></div>
-        <span>Πώς Δουλεύουμε / How We Work</span>
+        <span data-el="Πώς Δουλεύουμε" data-en="How We Work">Πώς Δουλεύουμε</span>
         <div class="section-label-line"></div>
       </div>
-      <h2 class="section-title reveal">Η Διαδικασία μας</h2>
-      <p class="section-desc reveal" style="margin:0 auto;">
+      <h2 class="section-title reveal" data-el="Η Διαδικασία μας" data-en="Our Process">Η Διαδικασία μας</h2>
+      <p class="section-desc reveal" style="margin:0 auto;" data-el="Από την πρώτη επαφή έως την παράδοση του κλειδιού, ακολουθούμε μία σαφή και αποδεδειγμένη διαδικασία που εξασφαλίζει αποτελέσματα υψηλής ποιότητας." data-en="From the first contact to the handover of the keys, we follow a clear and proven process that ensures high-quality results.">
         Από την πρώτη επαφή έως την παράδοση του κλειδιού, ακολουθούμε μία σαφή
         και αποδεδειγμένη διαδικασία που εξασφαλίζει αποτελέσματα υψηλής ποιότητας.
       </p>
@@ -267,23 +269,23 @@
     <div class="process-steps">
       <div class="process-step reveal">
         <div class="step-circle"><span class="step-num">01</span></div>
-        <h3 class="step-title">Επικοινωνία</h3>
-        <p class="step-desc">Επικοινωνήστε μαζί μας για μια δωρεάν αρχική συνάντηση και αξιολόγηση των αναγκών σας.</p>
+        <h3 class="step-title" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</h3>
+        <p class="step-desc" data-el="Επικοινωνήστε μαζί μας για μια δωρεάν αρχική συνάντηση και αξιολόγηση των αναγκών σας." data-en="Reach out to us for a free initial meeting and assessment of your needs.">Επικοινωνήστε μαζί μας για μια δωρεάν αρχική συνάντηση και αξιολόγηση των αναγκών σας.</p>
       </div>
       <div class="process-step reveal reveal-delay-1">
         <div class="step-circle"><span class="step-num">02</span></div>
-        <h3 class="step-title">Μελέτη &amp; Προσφορά</h3>
-        <p class="step-desc">Εκπονούμε λεπτομερή μελέτη και σας παρέχουμε αναλυτική προσφορά χωρίς κρυφές χρεώσεις.</p>
+        <h3 class="step-title" data-el="Μελέτη &amp; Προσφορά" data-en="Study &amp; Quote">Μελέτη &amp; Προσφορά</h3>
+        <p class="step-desc" data-el="Εκπονούμε λεπτομερή μελέτη και σας παρέχουμε αναλυτική προσφορά χωρίς κρυφές χρεώσεις." data-en="We prepare a detailed study and provide a transparent quote with no hidden charges.">Εκπονούμε λεπτομερή μελέτη και σας παρέχουμε αναλυτική προσφορά χωρίς κρυφές χρεώσεις.</p>
       </div>
       <div class="process-step reveal reveal-delay-2">
         <div class="step-circle"><span class="step-num">03</span></div>
-        <h3 class="step-title">Εκτέλεση</h3>
-        <p class="step-desc">Η ομάδα μας εκτελεί το έργο με ακρίβεια, τηρώντας το χρονοδιάγραμμα και τα πρότυπα ποιότητας.</p>
+        <h3 class="step-title" data-el="Εκτέλεση" data-en="Execution">Εκτέλεση</h3>
+        <p class="step-desc" data-el="Η ομάδα μας εκτελεί το έργο με ακρίβεια, τηρώντας το χρονοδιάγραμμα και τα πρότυπα ποιότητας." data-en="Our team executes the project with precision, adhering to the schedule and quality standards.">Η ομάδα μας εκτελεί το έργο με ακρίβεια, τηρώντας το χρονοδιάγραμμα και τα πρότυπα ποιότητας.</p>
       </div>
       <div class="process-step reveal reveal-delay-3">
         <div class="step-circle"><span class="step-num">04</span></div>
-        <h3 class="step-title">Παράδοση &amp; Εγγύηση</h3>
-        <p class="step-desc">Παραδίδουμε το έργο εντός συμφωνημένου χρόνου με γραπτή εγγύηση και μεταγενέστερη υποστήριξη.</p>
+        <h3 class="step-title" data-el="Παράδοση &amp; Εγγύηση" data-en="Delivery &amp; Guarantee">Παράδοση &amp; Εγγύηση</h3>
+        <p class="step-desc" data-el="Παραδίδουμε το έργο εντός συμφωνημένου χρόνου με γραπτή εγγύηση και μεταγενέστερη υποστήριξη." data-en="We deliver the project on time with a written guarantee and ongoing after-sales support.">Παραδίδουμε το έργο εντός συμφωνημένου χρόνου με γραπτή εγγύηση και μεταγενέστερη υποστήριξη.</p>
       </div>
     </div>
   </div>
@@ -296,20 +298,17 @@
       <div>
         <div class="section-label reveal">
           <div class="section-label-line"></div>
-          <span>Έργα / Portfolio</span>
+          <span data-el="Έργα / Portfolio" data-en="Projects / Portfolio">Έργα / Portfolio</span>
         </div>
         <h2 class="section-title reveal">
-          Τα <em>Έργα</em> μας
+          <span data-el="Τα" data-en="Our">Τα</span> <em data-el="Έργα" data-en="Projects">Έργα</em> <span data-el="μας" data-en="">μας</span>
         </h2>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-end;">
-        <p class="section-desc reveal" style="text-align:right;">
-          Κάθε έργο αντικατοπτρίζει την αφοσίωσή μας στην ποιότητα και τη λεπτομέρεια.
-        </p>
         <div class="gallery-filter reveal">
-          <button class="filter-btn active" data-filter="all">Όλα</button>
-          <button class="filter-btn" data-filter="renovation">Ανακαίνιση</button>
-          <button class="filter-btn" data-filter="construction">Κατασκευή</button>
+          <button class="filter-btn active" data-filter="all"         data-el="Όλα"        data-en="All">Όλα</button>
+          <button class="filter-btn"         data-filter="renovation" data-el="Ανακαίνιση" data-en="Renovation">Ανακαίνιση</button>
+          <button class="filter-btn"         data-filter="construction" data-el="Κατασκευή" data-en="Construction">Κατασκευή</button>
         </div>
       </div>
     </div>
@@ -322,17 +321,16 @@
   <div class="guarantee-inner">
     <div class="guarantee-icon">✦</div>
     <div class="guarantee-text">
-      <h2>Όλα τα Έργα Καλύπτονται από Γραπτή Εγγύηση</h2>
-      <p>
+      <h2 data-el="Όλα τα Έργα Καλύπτονται από Γραπτή Εγγύηση" data-en="All Projects Are Covered by a Written Guarantee">Όλα τα Έργα Καλύπτονται από Γραπτή Εγγύηση</h2>
+      <p data-el="Επιβλέπουμε κάθε στάδιο κατασκευής και τηρούμε αυστηρά τον χρόνο παράδοσης. Η εμπιστοσύνη σας είναι η μεγαλύτερη αμοιβή μας." data-en="We supervise every stage of construction and strictly honour every delivery deadline. Your trust is our greatest reward.">
         Επιβλέπουμε κάθε στάδιο κατασκευής και τηρούμε αυστηρά τον χρόνο παράδοσης.
-        Η εμπιστοσύνη σας είναι η μεγαλύτερη αμοιβή μας.<br/>
-        <em style="font-size:13px;">All works are covered by a written guarantee. We supervise every stage and honour every deadline.</em>
+        Η εμπιστοσύνη σας είναι η μεγαλύτερη αμοιβή μας.
       </p>
     </div>
     <div class="guarantee-badge">
       <div class="guarantee-badge-circle">
         <strong>100%</strong>
-        <span>Εγγύηση</span>
+        <span data-el="Εγγύηση" data-en="Guarantee">Εγγύηση</span>
       </div>
     </div>
   </div>
@@ -345,12 +343,12 @@
       <div class="contact-info">
         <div class="section-label reveal">
           <div class="section-label-line"></div>
-          <span>Επικοινωνία / Contact</span>
+          <span data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</span>
         </div>
-        <h2 class="section-title reveal">
+        <h2 class="section-title reveal" data-el="Μιλήστε μας &lt;em&gt;Σήμερα&lt;/em&gt;" data-en="Talk to Us &lt;em&gt;Today&lt;/em&gt;">
           Μιλήστε μας<br><em>Σήμερα</em>
         </h2>
-        <p class="section-desc reveal">
+        <p class="section-desc reveal" data-el="Είμαστε εδώ για να απαντήσουμε σε κάθε ερώτησή σας και να σας παρέχουμε δωρεάν προσφορά για το έργο σας." data-en="We are here to answer all your questions and provide a free quote for your project.">
           Είμαστε εδώ για να απαντήσουμε σε κάθε ερώτησή σας και να σας
           παρέχουμε δωρεάν προσφορά για το έργο σας.
         </p>
@@ -358,14 +356,16 @@
           <div class="contact-detail reveal">
             <div class="contact-detail-icon">✆</div>
             <div class="contact-detail-text">
-              <strong>Τηλέφωνο</strong>
+              <strong data-el="Τηλέφωνο" data-en="Phone">Τηλέφωνο</strong>
               <a href="tel:+302104967696">210 4967.696</a>
               <a href="tel:+306980780427">698 078 0427</a>
               <a href="tel:+306974922490">697 492 2490</a>
             </div>
           </div>
           <div class="contact-detail reveal reveal-delay-1">
-            <div class="contact-detail-icon"><img src="logo.png" alt="Email" style="width:28px;height:28px;object-fit:contain;"></div>
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            </div>
             <div class="contact-detail-text">
               <strong>Email</strong>
               <a href="mailto:antonakakisconstructor@gmail.com">antonakakisconstructor@gmail.com</a>
@@ -374,9 +374,8 @@
           <div class="contact-detail reveal reveal-delay-2">
             <div class="contact-detail-icon">◉</div>
             <div class="contact-detail-text">
-              <strong>Περιοχή Εξυπηρέτησης</strong>
-              <span>Αττική &amp; Πανελλαδικά</span>
-              <span style="font-size:13px;color:var(--gray);">Attica &amp; Nationwide</span>
+              <strong data-el="Περιοχή Εξυπηρέτησης" data-en="Service Area">Περιοχή Εξυπηρέτησης</strong>
+              <span data-el="Αττική &amp; Πανελλαδικά" data-en="Attica &amp; Nationwide">Αττική &amp; Πανελλαδικά</span>
             </div>
           </div>
         </div>
@@ -392,17 +391,17 @@
           </a>
         </div>
       </div>
-      <div>
+      <div class="contact-form-wrap">
         <form class="contact-form" id="clientContactForm">
           <input type="hidden" name="_to" value="antonakakisconstructor@gmail.com">
           <input type="hidden" name="_key" value="MyPrivateAgencyKey_99">
           <div class="form-row">
             <div class="form-group">
-              <label for="fname">Όνομα *</label>
-              <input type="text" id="fname" name="fname" placeholder="Το όνομά σας" required />
+              <label for="fname" data-el="Όνομα *" data-en="Name *">Όνομα *</label>
+              <input type="text" id="fname" name="fname" placeholder="Το όνομά σας" data-placeholder-el="Το όνομά σας" data-placeholder-en="Your name" required />
             </div>
             <div class="form-group">
-              <label for="phone">Τηλέφωνο *</label>
+              <label for="phone" data-el="Τηλέφωνο *" data-en="Phone *">Τηλέφωνο *</label>
               <input type="tel" id="phone" name="phone" placeholder="69X XXX XXXX" required />
             </div>
           </div>
@@ -411,27 +410,27 @@
             <input type="email" id="email" name="email" placeholder="email@example.com" />
           </div>
           <div class="form-group">
-            <label for="service">Τύπος Εργασίας</label>
+            <label for="service" data-el="Τύπος Εργασίας" data-en="Type of Work">Τύπος Εργασίας</label>
             <select id="service" name="service">
-              <option value="">Επιλέξτε υπηρεσία...</option>
-              <option>Ανακαίνιση Κατοικίας</option>
-              <option>Ανακαίνιση Επαγγελματικού Χώρου</option>
-              <option>Ηλεκτρολογικές Εργασίες</option>
-              <option>Υδραυλικές Εργασίες</option>
-              <option>Δάπεδα &amp; Επενδύσεις</option>
-              <option>Ενεργειακή Αναβάθμιση</option>
-              <option>Αλουμίνια &amp; Πόρτες</option>
-              <option>Γυψοσανίδες &amp; Εξοπλισμός</option>
-              <option>Άλλο</option>
+              <option value="" data-el="Επιλέξτε υπηρεσία..." data-en="Select a service...">Επιλέξτε υπηρεσία...</option>
+              <option data-el="Ανακαίνιση Κατοικίας"          data-en="Home Renovation">Ανακαίνιση Κατοικίας</option>
+              <option data-el="Ανακαίνιση Επαγγελματικού Χώρου" data-en="Commercial Renovation">Ανακαίνιση Επαγγελματικού Χώρου</option>
+              <option data-el="Ηλεκτρολογικές Εργασίες"       data-en="Electrical Works">Ηλεκτρολογικές Εργασίες</option>
+              <option data-el="Υδραυλικές Εργασίες"           data-en="Plumbing Works">Υδραυλικές Εργασίες</option>
+              <option data-el="Δάπεδα &amp; Επενδύσεις"       data-en="Floors &amp; Cladding">Δάπεδα &amp; Επενδύσεις</option>
+              <option data-el="Ενεργειακή Αναβάθμιση"         data-en="Energy Upgrade">Ενεργειακή Αναβάθμιση</option>
+              <option data-el="Αλουμίνια &amp; Πόρτες"        data-en="Aluminium &amp; Doors">Αλουμίνια &amp; Πόρτες</option>
+              <option data-el="Γυψοσανίδες &amp; Εξοπλισμός"  data-en="Drywalls &amp; Fit-out">Γυψοσανίδες &amp; Εξοπλισμός</option>
+              <option data-el="Άλλο"                           data-en="Other">Άλλο</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Μήνυμα</label>
-            <textarea id="message" name="message" placeholder="Περιγράψτε το έργο σας ή την ερώτησή σας..."></textarea>
+            <label for="message" data-el="Μήνυμα" data-en="Message">Μήνυμα</label>
+            <textarea id="message" name="message" placeholder="Περιγράψτε το έργο σας ή την ερώτησή σας..." data-placeholder-el="Περιγράψτε το έργο σας ή την ερώτησή σας..." data-placeholder-en="Describe your project or question..."></textarea>
           </div>
           <div id="formStatus"></div>
-          <button type="submit" class="form-submit">Αποστολή Αιτήματος</button>
-          <p class="form-note">* Υποχρεωτικά πεδία. Δωρεάν αξιολόγηση χωρίς δέσμευση.</p>
+          <button type="submit" class="form-submit" data-el="Αποστολή Αιτήματος" data-en="Send Request">Αποστολή Αιτήματος</button>
+          <p class="form-note" data-el="* Υποχρεωτικά πεδία. Δωρεάν αξιολόγηση χωρίς δέσμευση." data-en="* Required fields. Free assessment with no obligation.">* Υποχρεωτικά πεδία. Δωρεάν αξιολόγηση χωρίς δέσμευση.</p>
         </form>
       </div>
     </div>
@@ -445,13 +444,13 @@
       Αντωνακάκης <span>Κατασκευαστική</span>
     </div>
     <ul class="footer-links">
-      <li><a href="#about">Σχετικά</a></li>
-      <li><a href="#services">Υπηρεσίες</a></li>
-      <li><a href="#projects">Έργα</a></li>
-      <li><a href="#contact">Επικοινωνία</a></li>
+      <li><a href="#about"    data-el="Σχετικά"    data-en="About">Σχετικά</a></li>
+      <li><a href="#services" data-el="Υπηρεσίες"  data-en="Services">Υπηρεσίες</a></li>
+      <li><a href="#projects" data-el="Έργα"       data-en="Projects">Έργα</a></li>
+      <li><a href="#contact"  data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a></li>
     </ul>
     <p class="footer-copy">
-      © 2025 Αντωνακάκης Κατασκευαστική. Όλα τα δικαιώματα διατηρούνται.<br/>
+      © 2025 Αντωνακάκης Κατασκευαστική.<br/>
       <a href="mailto:antonakakisconstructor@gmail.com">antonakakisconstructor@gmail.com</a>
     </p>
   </div>
@@ -492,5 +491,6 @@
 
 <script src="main.js"></script>
 <script src="contact-form.js"></script>
+<script src="lang.js"></script>
 </body>
 </html>
