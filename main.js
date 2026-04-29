@@ -25,7 +25,7 @@ setInterval(() => {
   slides[current].classList.remove('active');
   current = (current + 1) % slides.length;
   slides[current].classList.add('active');
-}, 300000);
+}, 4000);
 
 // ── GALLERY DATA ──
 const galleryImages = Array.from({ length: 26 }, (_, i) => ({

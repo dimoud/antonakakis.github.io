@@ -324,8 +324,6 @@ nav:not(.scrolled) .lang-sep { color: var(--white); }
   gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
-  opacity: 0;
-  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.4s forwards;
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: 40px;
@@ -341,10 +339,16 @@ nav:not(.scrolled) .lang-sep { color: var(--white); }
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
+  opacity: 0;
+  animation: contactItemIn 0.6s cubic-bezier(0.22,1,0.36,1) calc(1.5s + var(--ci-delay, 0s)) forwards;
 }
-.hero-contact-item:hover { color: var(--white); }
+.hero-contact-item:hover { color: var(--white); transform: translateY(-2px); }
 .hero-contact-item svg { opacity: 0.7; flex-shrink: 0; }
+@keyframes contactItemIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .hero-contact-sep {
   color: rgba(255,255,255,0.25);
   font-size: 16px;
@@ -1245,8 +1249,8 @@ footer {
   }
   .hero-brand-line { min-width: 20px; max-width: 40px; }
   .hero-brand-first,
-  .hero-brand-second { font-size: 11px; letter-spacing: 3px; }
-  .hero-title { font-size: clamp(36px, 10vw, 56px); }
+  .hero-brand-second { font-size: 22px; letter-spacing: 3px; }
+  .hero-title { font-size: clamp(18px, 5vw, 28px); white-space: normal; }
   .hero-title::after { margin-top: 16px; width: 40px; }
   .hero-tagline { font-size: 12px; letter-spacing: 2px; margin: 14px 0 18px; }
   .hero-desc { font-size: 13px; margin-bottom: 24px; }
