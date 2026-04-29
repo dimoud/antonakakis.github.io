@@ -227,13 +227,14 @@ nav:not(.scrolled) .lang-sep { color: var(--white); }
 }
 .hero-brand-name {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   white-space: nowrap;
 }
 .hero-brand-first {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(13px, 2vw, 18px);
+  font-size: clamp(39px, 6vw, 54px);
   font-weight: 600;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -241,7 +242,7 @@ nav:not(.scrolled) .lang-sep { color: var(--white); }
 }
 .hero-brand-second {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(13px, 2vw, 18px);
+  font-size: clamp(39px, 6vw, 54px);
   font-weight: 600;
   letter-spacing: 5px;
   text-transform: uppercase;
