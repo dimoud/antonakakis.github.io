@@ -63,7 +63,7 @@ nav:not(.scrolled) .hamburger span { background: var(--white); }
   text-decoration: none;
 }
 .nav-logo-img {
-  height: 44px;
+  height: 66px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -200,68 +200,154 @@ nav:not(.scrolled) .lang-sep { color: var(--white); }
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 900px;
+  max-width: 860px;
   padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hero-badge {
-  display: inline-flex;
+
+/* ── brand label ── */
+.hero-brand {
+  display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 48px;
+  margin-top: 2cm;
+  margin-bottom: 32px;
   opacity: 0;
   animation: heroSlideDown 0.9s cubic-bezier(0.22,1,0.36,1) 0.2s forwards;
 }
-.hero-badge-line {
-  width: 80px; height: 2px;
-  background: var(--gold);
+.hero-brand-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.35);
+  min-width: 40px;
+  max-width: 80px;
 }
-.hero-badge span {
-  font-size: 42px;
-  font-weight: 700;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--white);
+.hero-brand-name {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+.hero-brand-first {
   font-family: 'Playfair Display', serif;
+  font-size: clamp(13px, 2vw, 18px);
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
 }
+.hero-brand-second {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(13px, 2vw, 18px);
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #e8a0a0;
+}
+
+/* ── headline ── */
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(44px, 7vw, 88px);
+  font-size: clamp(31px, 5.4vw, 66px);
   font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 12px;
+  line-height: 1.0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
-  animation: heroScaleUp 1s cubic-bezier(0.22,1,0.36,1) 0.55s forwards;
+  animation: heroScaleUp 1s cubic-bezier(0.22,1,0.36,1) 0.45s forwards;
 }
-.hero-title em {
+.hero-title-line1 {
+  color: var(--white);
+  display: block;
+}
+.hero-title-line2 {
   font-style: italic;
   color: var(--gold-light);
+  display: block;
 }
-.hero-subtitle {
+
+/* ── divider ── */
+.hero-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 24px auto 0;
+}
+
+/* ── tag line ── */
+.hero-tagline {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(18px, 3vw, 28px);
+  font-size: clamp(14px, 2vw, 20px);
   font-weight: 400;
-  color: rgba(255,255,255,0.92);
-  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  margin: 20px 0 28px;
   opacity: 0;
-  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.85s forwards;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.75s forwards;
 }
+
+/* ── description ── */
 .hero-desc {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.8;
-  max-width: 560px;
-  margin: 0 auto 48px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.85;
+  max-width: 480px;
+  margin: 0 0 36px;
   opacity: 0;
-  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.05s forwards;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.95s forwards;
 }
+
+/* ── CTA buttons ── */
 .hero-actions {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 36px;
   opacity: 0;
-  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.25s forwards;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.15s forwards;
+}
+
+/* ── contact strip ── */
+.hero-contact-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.4s forwards;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 40px;
+  padding: 12px 28px;
+  backdrop-filter: blur(6px);
+}
+.hero-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255,255,255,0.88);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.hero-contact-item:hover { color: var(--white); }
+.hero-contact-item svg { opacity: 0.7; flex-shrink: 0; }
+.hero-contact-sep {
+  color: rgba(255,255,255,0.25);
+  font-size: 16px;
+  line-height: 1;
 }
 .btn-primary {
   background: var(--gold);
@@ -538,24 +624,37 @@ section { padding: 120px 0; }
   transition: color 0.3s;
   display: block;
 }
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
 .service-icon {
   width: 48px; height: 48px;
-  margin-bottom: 20px;
+  flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(58,123,213,0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(58,123,213,0.08) 0%, rgba(58,123,213,0.04) 100%);
+  border: 1px solid rgba(58,123,213,0.15);
   color: var(--gold);
-  font-size: 22px;
-  transition: border-color 0.3s, background 0.3s;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.service-icon svg {
+  width: 24px; height: 24px;
+  stroke: var(--gold);
 }
 .service-card:hover .service-icon {
   border-color: var(--gold);
-  background: rgba(58,123,213,0.05);
+  background: linear-gradient(135deg, rgba(58,123,213,0.15) 0%, rgba(58,123,213,0.06) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58,123,213,0.15);
 }
 .service-name {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   line-height: 1.3;
 }
 .service-desc {
@@ -1121,6 +1220,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .hero-contact-strip { gap: 10px; padding: 10px 18px; }
+  .hero-contact-sep { display: none; }
+  .hero-contact-item { font-size: 12px; }
   nav { padding: 0 24px; }
   .nav-links, .nav-cta { display: none; }
   .nav-right { gap: 10px; }
