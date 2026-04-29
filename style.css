@@ -1211,35 +1211,125 @@ footer {
 }
 .drawer-overlay.open { display: block; }
 
-/* ── RESPONSIVE ── */
+/* ══ RESPONSIVE ══════════════════════════════════════════════ */
+
+/* ── tablet ── */
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .process-steps { grid-template-columns: repeat(2, 1fr); gap: 48px; }
   .process-steps::before { display: none; }
   .gallery-masonry { columns: 2; }
+  .about-grid { gap: 48px; }
+  .contact-grid { gap: 48px; }
 }
 
+/* ── mobile ── */
 @media (max-width: 768px) {
-  .hero-contact-strip { gap: 10px; padding: 10px 18px; }
-  .hero-contact-sep { display: none; }
-  .hero-contact-item { font-size: 12px; }
-  nav { padding: 0 24px; }
+
+  /* nav */
+  nav { padding: 0 20px; height: 64px; }
   .nav-links, .nav-cta { display: none; }
-  .nav-right { gap: 10px; }
+  .nav-right { gap: 8px; }
   .lang-toggle { order: -1; }
+  .lang-opt { font-size: 10px; }
   .hamburger { display: flex; }
-  .container { padding: 0 24px; }
-  section { padding: 80px 0; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-image-stack { height: 360px; }
-  .services-header, .gallery-header { grid-template-columns: 1fr; gap: 24px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; }
+  .nav-logo-img { height: 48px; }
+
+  /* hero */
+  .hero { min-height: 100svh; }
+  .hero-content { padding: 0 20px; }
+  .hero-brand {
+    margin-top: 1cm;
+    gap: 12px;
+  }
+  .hero-brand-line { min-width: 20px; max-width: 40px; }
+  .hero-brand-first,
+  .hero-brand-second { font-size: 11px; letter-spacing: 3px; }
+  .hero-title { font-size: clamp(36px, 10vw, 56px); }
+  .hero-title::after { margin-top: 16px; width: 40px; }
+  .hero-tagline { font-size: 12px; letter-spacing: 2px; margin: 14px 0 18px; }
+  .hero-desc { font-size: 13px; margin-bottom: 24px; }
+  .hero-actions { gap: 12px; margin-bottom: 24px; }
+  .btn-primary, .btn-secondary { padding: 13px 28px; font-size: 11px; }
+  .hero-contact-strip {
+    gap: 8px;
+    padding: 10px 16px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+  }
+  .hero-contact-sep { display: none; }
+  .hero-contact-item { font-size: 13px; }
+
+  /* general */
+  .container { padding: 0 20px; }
+  section { padding: 64px 0; }
+
+  /* stats */
   .stats-inner { flex-wrap: wrap; }
-  .stat-item { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.12); }
-  .guarantee-inner { flex-direction: column; gap: 32px; text-align: center; }
-  .guarantee-badge { margin-left: 0; }
-  .form-row { grid-template-columns: 1fr; }
+  .stat-item {
+    flex: 0 0 50%;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .stat-number { font-size: 32px; }
+
+  /* about */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-image-stack { height: 280px; }
+  .about-img-accent { border-width: 4px; }
+  .about-promises { gap: 14px; }
+
+  /* services */
+  .services-header { grid-template-columns: 1fr; gap: 16px; }
+  .services-grid { grid-template-columns: 1fr; gap: 12px; }
+  .service-card { padding: 28px 20px; }
+  .service-card-header { gap: 12px; }
+  .service-icon { width: 42px; height: 42px; border-radius: 10px; }
+  .service-icon svg { width: 20px; height: 20px; }
+  .service-name { font-size: 16px; }
+  .service-desc { font-size: 13px; }
+  .service-items li { font-size: 12px; }
+
+  /* process */
+  .process-steps { grid-template-columns: 1fr; gap: 36px; }
+  .step-circle { width: 72px; height: 72px; margin-bottom: 20px; }
+  .step-num { font-size: 22px; }
+  .step-title { font-size: 16px; }
+  .step-desc { font-size: 13px; }
+
+  /* gallery */
+  .gallery-header { grid-template-columns: 1fr; gap: 16px; }
+  .gallery-filter { flex-wrap: wrap; justify-content: flex-start; gap: 8px; }
   .gallery-masonry { columns: 1; }
-  .footer-inner { flex-direction: column; text-align: center; }
+
+  /* guarantee */
+  .guarantee { padding: 48px 0; }
+  .guarantee-inner { flex-direction: column; gap: 24px; text-align: center; padding: 0 20px; }
+  .guarantee-badge { margin-left: 0; }
+  .guarantee-text h2 { font-size: 22px; }
+
+  /* contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .contact-form-wrap { padding: 24px 18px; border-radius: 14px; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-submit { width: 100%; text-align: center; }
+
+  /* footer */
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+  /* lightbox */
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-arrow { width: 40px; height: 40px; font-size: 18px; }
+}
+
+/* ── small phones ── */
+@media (max-width: 400px) {
+  .hero-title { font-size: 32px; }
+  .stat-item { flex: 0 0 100%; }
+  .services-grid { grid-template-columns: 1fr; }
+  .hero-brand-first,
+  .hero-brand-second { font-size: 10px; letter-spacing: 2px; }
+  .hero-contact-strip { padding: 8px 12px; }
 }
