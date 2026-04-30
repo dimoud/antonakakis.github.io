@@ -53,6 +53,9 @@ nav.scrolled {
 /* white nav links on hero, blue after scroll */
 nav:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.92); }
 nav:not(.scrolled) .nav-links a:hover { color: var(--white); }
+/* drawer always uses dark text regardless of scroll state */
+.mobile-drawer .nav-links a { color: var(--text-main) !important; }
+.mobile-drawer .nav-links a:hover { color: var(--gold) !important; }
 nav:not(.scrolled) .nav-cta { border-color: rgba(255,255,255,0.7); color: var(--white); }
 nav:not(.scrolled) .nav-cta:hover { background: var(--white); color: var(--gold); }
 nav:not(.scrolled) .hamburger span { background: var(--white); }
@@ -958,36 +961,51 @@ section { padding: 120px 0; }
 }
 .contact-detail {
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 24px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(58,123,213,0.07);
+  transition: box-shadow 0.3s, transform 0.2s;
 }
+.contact-detail:hover { box-shadow: 0 6px 28px rgba(58,123,213,0.14); transform: translateY(-2px); }
 .contact-detail-icon {
-  width: 44px; height: 44px;
-  border: 1px solid rgba(58,123,213,0.3);
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold);
-  font-size: 18px;
+  color: var(--white);
+  font-size: 20px;
   flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(58,123,213,0.25);
+}
+.contact-detail-icon svg { stroke: var(--white); }
+.contact-detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .contact-detail-text strong {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .contact-detail-text a,
 .contact-detail-text span {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-main);
   text-decoration: none;
   display: block;
-  line-height: 1.6;
+  line-height: 1.55;
   transition: color 0.3s;
+  font-weight: 500;
 }
 .contact-detail-text a:hover { color: var(--gold); }
 
@@ -1249,19 +1267,21 @@ footer {
   }
   .hero-brand-line { min-width: 20px; max-width: 40px; }
   .hero-brand-first,
-  .hero-brand-second { font-size: 22px; letter-spacing: 3px; }
-  .hero-title { font-size: clamp(18px, 5vw, 28px); white-space: normal; }
+  .hero-brand-second { font-size: 66px; letter-spacing: 3px; }
+  .hero-title { font-size: clamp(14px, 4vw, 22px); white-space: normal; }
   .hero-title::after { margin-top: 16px; width: 40px; }
   .hero-tagline { font-size: 12px; letter-spacing: 2px; margin: 14px 0 18px; }
   .hero-desc { font-size: 13px; margin-bottom: 24px; }
-  .hero-actions { gap: 12px; margin-bottom: 24px; }
-  .btn-primary, .btn-secondary { padding: 13px 28px; font-size: 11px; }
+  .hero-actions { gap: 12px; margin-bottom: 24px; width: 100%; }
+  .btn-primary, .btn-secondary { padding: 13px 28px; font-size: 11px; width: 100%; text-align: center; box-sizing: border-box; }
   .hero-contact-strip {
     gap: 8px;
     padding: 10px 16px;
     flex-direction: column;
     align-items: center;
     border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .hero-contact-sep { display: none; }
   .hero-contact-item { font-size: 13px; }
@@ -1302,9 +1322,14 @@ footer {
   .step-title { font-size: 16px; }
   .step-desc { font-size: 13px; }
 
+  /* about & services section title — 20% smaller on mobile */
+  #about .section-title,
+  #services .section-title { font-size: clamp(26px, 3.2vw, 45px); }
+
   /* gallery */
   .gallery-header { grid-template-columns: 1fr; gap: 16px; }
-  .gallery-filter { flex-wrap: wrap; justify-content: flex-start; gap: 8px; }
+  .gallery-filter { flex-wrap: nowrap; justify-content: flex-start; gap: 6px; }
+  .filter-btn { padding: 8px 14px; font-size: 9px; letter-spacing: 1px; }
   .gallery-masonry { columns: 1; }
 
   /* guarantee */
@@ -1331,10 +1356,10 @@ footer {
 
 /* ── small phones ── */
 @media (max-width: 400px) {
-  .hero-title { font-size: 32px; }
+  .hero-title { font-size: clamp(14px, 4vw, 22px); }
   .stat-item { flex: 0 0 100%; }
   .services-grid { grid-template-columns: 1fr; }
   .hero-brand-first,
-  .hero-brand-second { font-size: 10px; letter-spacing: 2px; }
+  .hero-brand-second { font-size: 52px; letter-spacing: 2px; }
   .hero-contact-strip { padding: 8px 12px; }
 }
